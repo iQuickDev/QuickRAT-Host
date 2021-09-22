@@ -34,6 +34,7 @@ namespace QuickRAT_Host
             this.terminaloutput = new Guna.UI2.WinForms.Guna2TextBox();
             this.terminalcommandfield = new Guna.UI2.WinForms.Guna2TextBox();
             this.terminalsendbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.toggleterminal = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@ namespace QuickRAT_Host
             this.terminaloutput.ForeColor = System.Drawing.Color.White;
             this.terminaloutput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.terminaloutput.HoverState.Parent = this.terminaloutput;
-            this.terminaloutput.Location = new System.Drawing.Point(27, 55);
+            this.terminaloutput.Location = new System.Drawing.Point(27, 100);
             this.terminaloutput.Multiline = true;
             this.terminaloutput.Name = "terminaloutput";
             this.terminaloutput.PasswordChar = '\0';
@@ -112,7 +113,7 @@ namespace QuickRAT_Host
             this.terminalcommandfield.ForeColor = System.Drawing.Color.White;
             this.terminalcommandfield.HoverState.BorderColor = System.Drawing.Color.Aqua;
             this.terminalcommandfield.HoverState.Parent = this.terminalcommandfield;
-            this.terminalcommandfield.Location = new System.Drawing.Point(27, 390);
+            this.terminalcommandfield.Location = new System.Drawing.Point(27, 435);
             this.terminalcommandfield.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.terminalcommandfield.Multiline = true;
             this.terminalcommandfield.Name = "terminalcommandfield";
@@ -141,7 +142,7 @@ namespace QuickRAT_Host
             this.terminalsendbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.terminalsendbtn.ForeColor = System.Drawing.Color.White;
             this.terminalsendbtn.HoverState.Parent = this.terminalsendbtn;
-            this.terminalsendbtn.Location = new System.Drawing.Point(890, 390);
+            this.terminalsendbtn.Location = new System.Drawing.Point(890, 435);
             this.terminalsendbtn.Name = "terminalsendbtn";
             this.terminalsendbtn.PressedDepth = 0;
             this.terminalsendbtn.ShadowDecoration.Parent = this.terminalsendbtn;
@@ -149,11 +150,36 @@ namespace QuickRAT_Host
             this.terminalsendbtn.TabIndex = 32;
             this.terminalsendbtn.Text = "Send";
             // 
+            // toggleterminal
+            // 
+            this.toggleterminal.Animated = true;
+            this.toggleterminal.BackColor = System.Drawing.Color.Transparent;
+            this.toggleterminal.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.toggleterminal.CheckedState.BorderRadius = 8;
+            this.toggleterminal.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.toggleterminal.CheckedState.InnerBorderColor = System.Drawing.Color.Lime;
+            this.toggleterminal.CheckedState.InnerColor = System.Drawing.Color.Lime;
+            this.toggleterminal.CheckedState.Parent = this.toggleterminal;
+            this.toggleterminal.Location = new System.Drawing.Point(475, 57);
+            this.toggleterminal.Margin = new System.Windows.Forms.Padding(0);
+            this.toggleterminal.Name = "toggleterminal";
+            this.toggleterminal.ShadowDecoration.Parent = this.toggleterminal;
+            this.toggleterminal.Size = new System.Drawing.Size(50, 25);
+            this.toggleterminal.TabIndex = 33;
+            this.toggleterminal.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.toggleterminal.UncheckedState.BorderRadius = 8;
+            this.toggleterminal.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.toggleterminal.UncheckedState.InnerBorderColor = System.Drawing.Color.Red;
+            this.toggleterminal.UncheckedState.InnerColor = System.Drawing.Color.Red;
+            this.toggleterminal.UncheckedState.Parent = this.toggleterminal;
+            this.toggleterminal.UseTransparentBackground = true;
+            // 
             // Terminal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Controls.Add(this.toggleterminal);
             this.Controls.Add(this.terminalsendbtn);
             this.Controls.Add(this.terminalcommandfield);
             this.Controls.Add(this.terminaloutput);
@@ -173,5 +199,6 @@ namespace QuickRAT_Host
         internal Guna.UI2.WinForms.Guna2TextBox terminaloutput;
         internal Guna.UI2.WinForms.Guna2TextBox terminalcommandfield;
         private Guna.UI2.WinForms.Guna2Button terminalsendbtn;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch toggleterminal;
     }
 }
